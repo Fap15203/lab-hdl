@@ -41,6 +41,7 @@ Xem testbench chuẩn ở đây và sửa số: https://codereview.stackexchange
 
 ### Đối với testbench cho module nhớ
 Testbench của ba module nhớ gần như giống hệt nhau
+
 Cách hoạt động của testbench:
 
     1. Tạo clock, khối always
