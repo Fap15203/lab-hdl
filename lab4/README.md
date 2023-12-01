@@ -33,6 +33,7 @@ Chức năng:
 Ngoài ra, do bài tập 4 Single Port RAM yêu cầu data read và write qua một cổng inout, cần tạo thanh ghi temporary data trước khi xuất giá trị qua cổng inout.
 
 Tham khảo Single Port RAM tại: https://www.chipverify.com/verilog/verilog-single-port-ram
+
 Cách sử dụng cổng inout: https://electronics.stackexchange.com/questions/556859/verilog-testbench-for-inout
 ## 3. Chỉnh sửa lại testbench
 ### Đối với testbench cho ALU: 
