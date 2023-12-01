@@ -42,9 +42,7 @@ module reg_file (
         else begin
             if (WE3) mem[A3] <= WD3;
         end
-        $display("A1 = %h", A1);
-        $display("A2 = %h", A2);
-        $display("A3 = %h", A3);
+
      end
      assign RD1 = mem[A1];
      assign RD2 = mem[A2];
