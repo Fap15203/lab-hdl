@@ -20,4 +20,4 @@ module alu(input [31:0] a, input [31:0] b, input [2:0] f, output reg [31:0] out)
         //else if( f == 3'b111)   // A+1
            // out = a + 1;
     end
-endmodule
+endmodule 
