@@ -17,7 +17,7 @@ module alu(input [31:0] a, input [31:0] b, input [2:0] f, output reg [31:0] out)
             out = a + b;
         else if( f == 3'b110)   // A-B
             out = a - b;
-        //else if( f == 3'b111)   // A+1
-           // out = a + 1;
+        else if( f == 3'b111)   // A+1
+            out = a + 1;
     end
 endmodule 
