@@ -1,4 +1,5 @@
 # Những việc cần làm đối với lab 4
+Ngoại trừ Single Port RAM, tất cả cách module ALU, Register File, Data Memory đều sẽ được tái sử dụng trong lab 5, Datapath của bộ xử lý MIPS.
 ## 1. Thực hiện bộ ALU 
 Đối với ALU trong lab 4, module đọc giá trị f (function) và thực hiện các phép tính với ngõ vào 32 bit a và b.
 
