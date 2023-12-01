@@ -25,8 +25,7 @@ module ram(
   input cs,
   input wr_e, o_e,
   input [7:0] addr,
-  input [7:0] data,
-  output reg [7:0] data_r
+  inout [7:0] data,
 );
   reg [7:0] tmp_data;
   reg [7:0] mem [0:127];
