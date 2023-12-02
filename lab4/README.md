@@ -42,6 +42,20 @@ Cách sử dụng cổng inout: https://electronics.stackexchange.com/questions/
 
 Xem testbench chuẩn ở đây và sửa số: https://codereview.stackexchange.com/questions/157383/32-bit-alu-design-implementation-and-testbench
 
+Nếu muốn báo cáo testbench theo kiểu testvector như code mẫu, cần thêm một file alu_tv.mem có nội dung như ví dụ:
+```mem
+2_00000000_00000000_00000000
+2_00000000_FFFFFFFF_FFFFFFFF
+2_00000001_FFFFFFFF_00000000
+2_000000FF_00000001_00000100
+6_00000000_00000000_00000000
+6_00000000_FFFFFFFF_00000001
+6_00000001_00000001_00000000
+6_00000100_00000001_000000FF
+//mã function - Toán hạng A 32 bit - Toán hạng B 32 bit - Kết quả trả về kỳ vọng
+```
+
+
 ### Đối với testbench cho module nhớ
 Testbench của ba module nhớ gần như giống hệt nhau
 
