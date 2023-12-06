@@ -66,3 +66,17 @@ Cách hoạt động của testbench:
     3. Dòng for đầu tiên nạp các giá trị random vào bộ nhớ từ địa chỉ 0 đến 9; dòng for thứ hai đọc giá trị được lưu trong các ô nhớ từ 0 đến 9 có giống với những gì được nạp.
  
 **Thay đổi for (i = 0; i < 10; i++) thành repeat (10); tìm hiểu thêm về lệnh repeat, nếu chưa hiểu code đủ để làm điều này thì đừng báo cáo.**
+
++ Testbench self-checking:
+
+  Sửa lại như sau đối với ví dụ là reg_file.v
+```v
+for (i = 0; i < 10; i= i+1) begin
+      @(posedge clk) write_address <= i; write_en <= 1; write_data <= i;
+end
+for (i = 0; i < 10; i= i+1) begin
+      @(posedge clk) read_address1 <= i; read_address2 <= 10-i; write_en <= 0;
+        if(read_data1 != i)  $display("error")
+        else        $display("success")
+end
+```
