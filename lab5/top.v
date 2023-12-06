@@ -55,9 +55,10 @@ module top(
         .DataW(rs2)
     );
     mux muxC (
-        .a(mem),
-        .b(alu_result),
+        .b(mem),
+        .a(alu_result),
         .s(MemToReg),
         .c(wd)
     );
+endmodule
 endmodule
