@@ -12,6 +12,9 @@ module top(
     wire [31:0] rd1, rd2, imm, B_alu, alu_result, mem, wd;
     wire [4:0] wr_addr;
     
+    mux muxA (
+        .a
+    );
     reg_file register_file (
         .clk(clk),
         .rst(rst),
@@ -49,8 +52,8 @@ module top(
         .DataW(rs2)
     );
     mux muxC (
-        .a(mem),
-        .b(alu_result),
+        .b(mem),
+        .a(alu_result),
         .s(MemToReg),
         .c(wd)
     );
