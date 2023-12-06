@@ -3,7 +3,7 @@
 module top(
     input clk,
     input rst,
-    input [31:0] instr,
+    output [31:0] instruction,
     output iszero
     //control signal
 //    input [4:0] alu_control,
@@ -11,6 +11,11 @@ module top(
     );
     wire [31:0] rd1, rd2, imm, B_alu, alu_result, mem, wd;
     wire [4:0] wr_addr;
+    wire [2:0] alu_control;
+    wire RegDst, RegWrite, MemWrite, ALUsrc, MemToReg;
+    //other signal
+    wire [31:0] instr, alu_result, pc, pc_next;
+    assign instruction = instr; //for debug
     
     controller controller (
         .opcode(instr[31:26]),
