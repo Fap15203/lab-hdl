@@ -3,7 +3,7 @@
 module controller(
     input [5:0] opcode,
     output reg RegDst, RegWrite, ALUsrc, MemWrite, MemRead, MemToReg,
-    output reg [4:0] alu_control
+    output reg [2:0] alu_control
     );
     //opcode
     parameter ADD       = 6'h0;
