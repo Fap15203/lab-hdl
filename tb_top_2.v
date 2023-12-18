@@ -2,12 +2,12 @@
 module tb_top_2(
 );
     reg clk,rst;
-    reg [31:0] instr;
+    reg [31:0] instruction;
     
     top top_instance(
         .clk(clk),
         .rst(rst),
-      .instruction(instr) //input
+        .instr(instruction) //input
     );
     initial begin
         clk <= 1'b0;
